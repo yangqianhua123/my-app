@@ -1,17 +1,17 @@
-# my-app
+# 项目运行方式
 
 ## Project setup
 ```
-npm install
-npm i vuex@3.6.2
+先执行 npm install 
+在执行 npm i vuex@3.6.2 这里Vuex版本必须是3.6.2 否则会报错
 ```
 
-### Compiles and hot-reloads for development
+### 项目启动
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 打包
 ```
 npm run build
 ```
