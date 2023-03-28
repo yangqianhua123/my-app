@@ -10,7 +10,9 @@
           </div>
         </div>
         <div class="login-info">
-          <p>上次登录时间:<span>2023-1-17</span></p>
+          <p>
+            上次登录时间:<span>{{ year }}-{{ month }}-{{ day }}</span>
+          </p>
           <p>上次登录地点:<span>成都</span></p>
         </div>
       </el-card>
@@ -113,9 +115,19 @@ export default {
           color: "#5ab1ef",
         },
       ],
+      year: "",
+      month: "",
+      day: "",
     };
   },
+
   mounted() {
+    //获取上次登录时间
+    let today = new Date();
+    this.year = today.getFullYear();
+    this.month = today.getMonth() + 1;
+    this.day = today.getDate();
+
     getData().then(({ data }) => {
       const { tableData } = data.data;
       console.log(data.data);
